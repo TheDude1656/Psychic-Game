@@ -14,6 +14,15 @@ window.onload = function() {
         var guess = event.key;
         $("#guessed").append(guess + " ");
 
+        document.getElementById("reset").onclick = function() {
+            
+            gLeft = 10;
+            $("#guessleft").html("Guesses Left: " + gLeft);
+    		$("#guessed").html("Your Guess so far: ");
+            $("#winlose").html("");
+            
+            
+        };
         if (guess === computerGuess) {
             wins++;
             $("#wins").html("Wins: " + wins);
