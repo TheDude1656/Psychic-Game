@@ -22,7 +22,7 @@ window.onload = function() {
             $("#guessleft").html("Guesses Left: " + gLeft);
             $("#guessed").html("Your Guess so far: ");
             $("#winlose").html("");
-            var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+            
 
 
         };
