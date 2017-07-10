@@ -5,8 +5,11 @@ window.onload = function() {
     var wins = 0;
     var losses = 0;
     var gLeft = 10;
-    var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+    var computerGuess = compGuess();
 
+    function compGuess() {
+        return alphabet[Math.floor(Math.random() * alphabet.length)];
+    }
 
     document.onkeyup = function(event) {
         var guess = event.key;
@@ -22,7 +25,7 @@ window.onload = function() {
             $("#guessleft").html("Guesses Left: " + gLeft);
             $("#guessed").html("Your Guess so far: ");
             $("#winlose").html("");
-            
+            compGuess();
 
 
         };
