@@ -7,20 +7,23 @@ window.onload = function() {
     var gLeft = 10;
     var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 
-    console.log(computerGuess);
-
 
     document.onkeyup = function(event) {
         var guess = event.key;
+
+
         $("#guessed").append(guess + " ");
 
         document.getElementById("reset").onclick = function() {
+
+
 
             gLeft = 10;
             $("#guessleft").html("Guesses Left: " + gLeft);
             $("#guessed").html("Your Guess so far: ");
             $("#winlose").html("");
-           
+            var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+
 
         };
         if (guess === computerGuess) {
