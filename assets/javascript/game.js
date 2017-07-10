@@ -20,7 +20,7 @@ window.onload = function() {
             $("#guessleft").html("Guesses Left: " + gLeft);
             $("#guessed").html("Your Guess so far: ");
             $("#winlose").html("");
-
+           
 
         };
         if (guess === computerGuess) {
